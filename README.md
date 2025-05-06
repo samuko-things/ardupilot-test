@@ -96,14 +96,18 @@
   > git clone --recurse-submodules https://github.com/ardupilot/Micro-XRCE-DDS-Gen.git
   > cd Micro-XRCE-DDS-Gen
   > ./gradlew assemble
+  > export PATH=\$PATH:$PWD/scripts
   > echo "export PATH=\$PATH:$PWD/scripts" >> ~/.bashrc
   > ```
 
 - You can test the MicroXRCEDDSGen installation
+  > ``` shell
   > source ~/.bashrc
   > microxrceddsgen -help
+  > ```
+  
 
-- Now build the ardu_ws ROS workspace:
+- Now build the ardu_ws ROS workspace (preferably open a new terminal):
   > ``` shell
   > cd ~/ardu_ws
   > colcon build --packages-up-to ardupilot_dds_tests
