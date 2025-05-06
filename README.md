@@ -18,19 +18,10 @@
   >  mkdir ~/ardupilot-test
   > ```
 
-- Change directory into the ardupilot-test folder
-  > ``` shell
-  >  cd ~/ardupilot-test
-  > ```
-
 - Clone the main ardupilot branch in the ardupilot-test folder (this might take a while depending on your Internet speed)
   > ``` shell
+  >  cd ~/ardupilot-test
   >  git clone --recurse-submodules https://github.com/ArduPilot/ardupilot.git
-  > ```
-
-- Change directory into the downloaded/cloned ardupilot folder
-  > ``` shell
-  >  cd ~/ardupilot-test/ardupilot
   > ```
 
 - Install required packages (while in the downloaded/cloned ardupilot folder)
@@ -50,16 +41,14 @@
 
 - Build/configure the arduipilot vehicle type to be used - ArduCopter (copter) (NOTE: this might take a while depending on your machine resources)
   > ``` shell
-  >  cd ~/ardupilot-test
   >  cd ~/ardupilot-test/ardupilot
   >  ./waf copter
   > ```
 
 - Test run with the copter simulation with SITL (you can CTRL-C to close)
   > ``` shell
-  >  cd ~/ardupilot-test
   >  cd ~/ardupilot-test/ardupilot/Tools/autotest
-  >  python3 sim_vehicle.py
+  >  python3 sim_vehicle.py -v copter --console --map
   > ```
 
 
