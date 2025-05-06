@@ -89,6 +89,20 @@
   > rosdep install --from-paths src --ignore-src -r -y
   > ```
 
+- Install the MicroXRCEDDSGen build dependency:
+  > ``` shell
+  > sudo apt install default-jre
+  > cd ~/ardu_ws
+  > git clone --recurse-submodules https://github.com/ardupilot/Micro-XRCE-DDS-Gen.git
+  > cd Micro-XRCE-DDS-Gen
+  > ./gradlew assemble
+  > echo "export PATH=\$PATH:$PWD/scripts" >> ~/.bashrc
+  > ```
+
+- You can test the MicroXRCEDDSGen installation
+  > source ~/.bashrc
+  > microxrceddsgen -help
+
 - Now build the ardu_ws ROS workspace:
   > ``` shell
   > cd ~/ardu_ws
