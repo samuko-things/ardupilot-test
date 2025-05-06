@@ -105,7 +105,6 @@
   > source ~/.bashrc
   > microxrceddsgen -help
   > ```
-  
 
 - Now build the ardu_ws ROS workspace (preferably open a new terminal):
   > ``` shell
@@ -115,7 +114,7 @@
 
 - If the build fails, when you request help, please re-run the build in verbose mode like so:
   > ``` shell
-  > cd ~/ardupilot-test/ardupilot
+  > cd ~/ardu_ws
   > colcon build --packages-up-to ardupilot_dds_tests --event-handlers=console_cohesion+
   > ```
 
