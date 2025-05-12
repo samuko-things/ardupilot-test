@@ -194,3 +194,9 @@
   > source install/setup.bash
   > ros2 launch ardupilot_gz_bringup iris_runway.launch.py
   > ```
+
+- Drive/control the drone using MAVProxy as you did in part one.
+  > ``` shell
+  > cd ~/ardu_ws
+  > mavproxy.py --master udp:127.0.0.1:14550  --console --map
+  > ```
