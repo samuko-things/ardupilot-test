@@ -187,16 +187,24 @@
   > colcon test-result --all --verbose
   > ```
 
-- Run the ardupilot simulation (read more here: https://github.com/ArduPilot/ardupilot_gz#ardupilot_gz)
+- Run the iris-maze ardupilot simulation (read more here: https://github.com/ArduPilot/ardupilot_gz#ardupilot_gz)
   > ``` shell
   > cd ~/ardu_ws
   > export GZ_VERSION=harmonic
   > source install/setup.bash
-  > ros2 launch ardupilot_gz_bringup iris_runway.launch.py
+  > ros2 launch ardupilot_gz_bringup iris_maze.launch.py rviz:=true use_gz_tf:=true
   > ```
 
 - Drive/control the drone using MAVProxy as you did in part one.
   > ``` shell
   > cd ~/ardu_ws
   > mavproxy.py --master udp:127.0.0.1:14550  --console --map
+  > ```
+
+- you can also launch the iris-runway ardupilot simulation
+  > ``` shell
+  > cd ~/ardu_ws
+  > export GZ_VERSION=harmonic
+  > source install/setup.bash
+  > ros2 launch ardupilot_gz_bringup iris_runway.launch.py rviz:=true use_gz_tf:=true
   > ```
